@@ -1,0 +1,84 @@
+<div class="register-wrapper">
+  <div class="register-card">
+    <!-- Header -->
+    <div class="register-header">
+      <h1>Đăng ký khóa học</h1>
+    </div>
+    <!-- Body -->
+    <div class="register-body">
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <!-- Name -->
+        <div class="form-group">
+          <label>Họ và tên</label>
+          <input type="text" formControlName="name" placeholder="Nguyen Van A">
+        <!-- Hiện thị lỗi nếu đã submit và trường name không hợp lệ -->
+          <small *ngIf="submitted && registrationForm.get('name')?.invalid">
+            Bạn chưa nhập tên
+          </small> 
+        </div>
+        <!-- Email -->
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" formControlName="email" placeholder="abc@gmail.com">
+          <small *ngIf="submitted && registrationForm.get('email')?.errors">
+            Email không hợp lệ
+          </small>
+        </div>
+        <!-- Phone -->
+        <div class="form-group">
+          <label>Số điện thoại</label>
+          <input type="text" formControlName="phone" placeholder="0123456789">
+          <small *ngIf="submitted && registrationForm.get('phone')?.invalid">
+            Số điện thoại không hợp lệ
+          </small>
+        </div>
+        <!-- Course -->
+        <div class="form-group">
+          <label>Khóa học</label>
+          <select formControlName="course">
+            <option value="">-- Chọn khóa học --</option>
+            <option>Ruby</option>
+            <option>Python</option>
+            <option>JavaScript</option>
+          </select>
+        </div>
+
+        <!-- Time -->
+        <div class="form-group time-group">
+            <label class="time-label">Ca học</label>
+            <div class="radio-group">
+                <label>
+                <input type="radio" value="sang" formControlName="time"> Sáng
+                </label>
+                <label>
+                <input type="radio" value="toi" formControlName="time"> Tối
+                </label>
+            </div>
+            <small *ngIf="submitted && registrationForm.get('time')?.invalid">
+            Vui lòng chọn ca học
+            </small>
+        </div>
+            
+
+
+        <!-- Agree -->
+        <div class="checkbox-group">
+          <input type="checkbox" formControlName="agree">
+          <span>Đồng ý với điều khoản</span>
+        </div>
+        <small *ngIf="submitted && registrationForm.get('agree')?.invalid" style="color:red">
+          Bạn phải đồng ý điều khoản
+        </small>
+        <!-- Submit -->
+        <button type="submit" class="submit-btn">
+          Đăng ký
+        </button>
+      </form>
+      <!-- JSON Output -->
+      <div *ngIf="jsonOutput" class="json-box">
+        <strong>JSON Output</strong>
+        <pre>{{ jsonOutput }}</pre>
+      </div>
+    </div>
+  </div>
+</div>

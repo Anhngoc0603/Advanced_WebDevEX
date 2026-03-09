@@ -1,0 +1,33 @@
+<h3 class="product-title">Product List</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let p of data">
+      <div class="product-card">
+
+        <!-- Discount -->
+        <span class="discount">-25%</span>
+
+        <!-- Image -->
+        <div class="img-box">
+          <img [src]="p.image" alt="">
+        </div>
+
+        <!-- Info -->
+        <div class="info">
+          <h6 class="name">{{ p.title }}</h6>
+
+          <div class="price">${{ p.price }}</div>
+
+          <div class="meta">
+            <span class="rating"> {{ p.rating.rate }}</span>
+            <span class="count">Count: {{ p.rating.count }}</span>
+          </div>
+
+          <button class="buy-btn">Buy Now</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

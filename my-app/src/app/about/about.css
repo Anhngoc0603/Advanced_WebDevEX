@@ -1,0 +1,46 @@
+.about-card {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    align-items: center;
+}
+
+/* AVATAR */
+.avatar img {
+    width: 140px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #ffc107;
+}
+
+/* INFO */
+.info {
+    flex: 1;
+}
+
+.info .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.info .row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.value {
+    font-weight: 500;
+    color: #212529;
+}

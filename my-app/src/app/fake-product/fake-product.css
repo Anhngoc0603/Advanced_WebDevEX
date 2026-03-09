@@ -1,0 +1,80 @@
+p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #1e40af;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* HEADER */
+thead {
+    background-color: #2563eb;
+    color: white;
+}
+
+th {
+    padding: 12px;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+/* BODY */
+td {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+/* Hover row */
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* DESCRIPTION */
+td:nth-child(4) {
+    max-width: 350px;
+    line-height: 1.5;
+    color: #374151;
+}
+
+/* IMAGE */
+td img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+td img:hover {
+    transform: scale(1.15);
+}
+
+/* CATEGORY */
+td:nth-child(5) {
+    font-weight: bold;
+    color: #0f766e;
+}
+
+/* PRICE */
+td:nth-child(3) {
+    font-weight: bold;
+    color: #16a34a;
+}
+
+/* RATING */
+td:last-child {
+    font-weight: bold;
+    color: #f59e0b;
+    text-align: center;
+}

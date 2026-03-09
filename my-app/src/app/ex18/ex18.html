@@ -1,0 +1,50 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4 fw-bold">Danh sách Khách hàng theo Nhóm</h2>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngFor="let group of customerGroups; let i = index">
+    <h4 class="mt-5 mb-3 text-primary">
+      {{ i + 1 }} - {{ group.CustomerTypeName }}
+    </h4>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th># (Avatar)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customer of group.Customers">
+            <td>{{ customer.Id }}</td>
+            <td>{{ customer.Name }}</td>
+            <td>{{ customer.Email }}</td>
+            <td>{{ customer.Age }}</td>
+            <td>
+              <img 
+                [src]="customer.Image" 
+                alt="{{ customer.Name }}" 
+                class="rounded-circle avatar-img"
+                width="80" 
+                height="80"
+                onerror="this.src='https://via.placeholder.com/80?text=Avatar';"
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div *ngIf="customerGroups.length === 0 && !errorMessage" class="text-center mt-5">
+    <div class="spinner-border text-primary" role="status"></div>
+    <p>Đang tải dữ liệu...</p>
+  </div>
+</div>

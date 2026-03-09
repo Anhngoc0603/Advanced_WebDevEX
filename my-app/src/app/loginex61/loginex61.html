@@ -1,0 +1,53 @@
+<!-- Thay toàn bộ code cũ bằng code này -->
+<div class="login-wrapper">
+  <div class="login-card">
+    
+    <div class="login-header">
+      <h3>Login System</h3>
+      <!-- Nếu muốn có nút close thì thêm, còn không thì bỏ phần close-btn -->
+      <!-- <span class="close-btn" (click)="closeModal()">×</span> -->
+    </div>
+
+    <div class="login-body">
+      <!-- Nếu bạn có logo thì bỏ comment và thêm ảnh -->
+      <!-- 
+      <div class="logo-box">
+        <img src="assets/logo.png" alt="Logo">
+      </div>
+      -->
+
+      <div class="login-form">
+        <div class="mb-3">
+          <label class="form-label">User Name</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            [(ngModel)]="username"
+            placeholder="Enter username"
+            required
+          >
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input 
+            type="password" 
+            class="form-control" 
+            [(ngModel)]="password"
+            placeholder="Enter password"
+            required
+          >
+        </div>
+
+        <button 
+          class="btn-login"
+          [disabled]="!username || !password"
+          (click)="login()"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

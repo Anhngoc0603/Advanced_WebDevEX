@@ -1,0 +1,42 @@
+<p>coindesk-api works!</p>
+<div>
+    <h1>Bitcoin Price Index (BPI) - Real-time</h1>
+
+    <div *ngIf="loading" style="text-align:center; padding: 40px;">
+      Loading Bitcoin prices...
+    </div>
+
+    <div *ngIf="errorMessage" style="color: red; text-align:center; padding: 20px;">
+      {{ errorMessage }}
+    </div>
+
+    <div *ngIf="bitcoinData && !loading && !errorMessage">
+      <div class="price-box">
+        <div class="updated">
+          Last updated: {{ bitcoinData.time.updated }} ({{ bitcoinData.time.updatedISO }})
+        </div>
+
+        <div class="currency">
+          <span>USD (United States Dollar)</span><br>
+          <span class="rate">{{ bitcoinData.bpi.USD.rate_float | number:'1.2-2' }} {{ bitcoinData.bpi.USD.code }}</span>
+          <small>({{ bitcoinData.bpi.USD.description }})</small>
+        </div>
+
+        <div class="currency">
+          <span>GBP (British Pound Sterling)</span><br>
+          <span class="rate">{{ bitcoinData.bpi.GBP.rate_float | number:'1.2-2' }} {{ bitcoinData.bpi.GBP.code }}</span>
+          <small>({{ bitcoinData.bpi.GBP.description }})</small>
+        </div>
+
+        <div class="currency">
+          <span>EUR (Euro)</span><br>
+          <span class="rate">{{ bitcoinData.bpi.EUR.rate_float | number:'1.2-2' }} {{ bitcoinData.bpi.EUR.code }}</span>
+          <small>({{ bitcoinData.bpi.EUR.description }})</small>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        {{ bitcoinData.disclaimer }}
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,60 @@
+<div class="login-wrapper">
+  <div class="login-card">
+
+    <!-- Header -->
+    <div class="login-header">
+      <h3>Login to the Teacher</h3>
+      <span class="close-btn">&times;</span>
+    </div>
+
+    <!-- Body -->
+    <div class="login-body">
+      <!-- Logo -->
+      <div class="logo-box">
+        <img src="/assets/LogoUEL.png" alt="FIS Logo">
+      </div>
+
+      <!-- Form -->
+      <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <input
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+        >
+
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        >
+
+        <div class="remember-me">
+          <input 
+            type="checkbox" 
+            id="rememberMe" 
+            (change)="onRememberChange($event)"
+            [checked]="rememberMe"
+          >
+          <label for="rememberMe">Remember me</label>
+        </div>
+
+        <button type="submit" [disabled]="loginForm.invalid">
+          Log in
+        </button>
+
+        <!-- Hiển thị JSON output -->
+        <pre *ngIf="jsonOutput" class="json-output">
+          {{ jsonOutput }}
+        </pre>
+
+        <!-- Thông báo lỗi -->
+        <p *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </p>
+
+      </form>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,106 @@
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.login-card {
+  width: 420px;           /* nhỏ hơn register một chút vì login thường gọn hơn */
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.login-header {
+  position: relative;
+  padding: 18px 24px;
+  border-bottom: 1px solid #e8e8e8;
+  text-align: center;
+  background: #fafafa;
+}
+
+.login-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  color: #888;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.login-body {
+  display: flex;
+  padding: 32px 40px;
+  gap: 35px;
+  align-items: center;
+}
+
+.logo-box img {
+  width: 140px;
+  height: auto;
+}
+
+.login-form {
+  flex: 1;
+}
+
+.login-form .form-label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.login-form .form-control {
+  width: 100%;
+  padding: 11px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.login-form .form-control:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;          /* màu xanh đậm hiện đại hơn */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-login:hover {
+  background: #1d4ed8;
+}
+
+.btn-login:disabled {
+  background: #9ab8e9;
+  cursor: not-allowed;
+}

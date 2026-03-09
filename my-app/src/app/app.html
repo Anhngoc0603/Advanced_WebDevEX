@@ -1,0 +1,85 @@
+<div id="container">  
+<ul>
+<li> <a href="#">HOME</a></li>
+<li> <a href="#">FASHION</a>
+    <ul>
+        <li> <a routerLink="ex61">Login</a></li>
+        <li> <a routerLink="registerweb">Register Fashion</a></li>
+    </ul>
+</li>
+<li> <a href="#">Customers</a>
+    <ul>
+     <li> <a routerLink="khach-hang-1">Customer 1</a></li>
+     <li> <a routerLink="khach-hang-2">Customer 2</a></li>
+     <li> <a routerLink="khach-hang-3">Customer 3</a></li>
+     <li> <a routerLink="khach-hang-4">Customer 4</a></li>
+
+ </ul>
+</li>
+<li> <a href="#">Product</a>
+ <ul>
+     <li> <a routerLink="san-pham-1">Product 01</a></li>
+     <li> <a routerLink="ex13-product">Product 02 - EX13</a></li>
+     <li> <a routerLink="ex14-product">Product 03 - EX14</a></li>
+ </ul>
+</li>
+<li> <a href="#">HTML DOM</a></li>
+<li> <a href="#">NGÔN NGỮ ASP</a></li>
+<li> <a routerLink="gioi-thieu">ABOUT</a></li>
+<li> <a routerLink="forms">FORMS</a>
+    <ul>
+        <li> <a routerLink="login">Form</a></li>
+        <li> <a routerLink="registerweb">Register Fashion</a></li>
+        <li> <a routerLink="register">Reactive form</a></li>
+        <li> <a routerLink="mathematics">Mathematics</a></li>
+    </ul>
+</li>
+<li> <a href="#">EXTERNAL API</a>
+    <ul>
+     <li> <a routerLink="ex26">EX26</a></li>
+     <li> <a routerLink="ex27">EX27</a></li>
+     <li> <a routerLink="ex28">EX28</a></li>
+ </ul>
+</li>
+
+<li> <a href="#">INTERNAL API</a>
+    <ul>
+        <li> <a routerLink="ex39">Book</a></li>
+        <li> <a routerLink="ex41">Bookdetail</a></li>
+        <li> <a routerLink="ex43">NewBook</a></li>
+        <li> <a routerLink="ex45">BookUpdate</a></li>
+        <li> <a routerLink="ex47">BookDelete</a></li>
+        <li> <a routerLink="ex50">Book Management</a></li>
+    </ul>
+</li>
+
+<li> <a href="#">MONGODB - Fashion</a>
+    <ul>
+        <li> <a routerLink="ex53">Fashion</a></li>
+        <li> <a routerLink="ex54">FashionDetail</a></li>
+    </ul>
+</li>
+<li> <a href="#">E-COMMERCE</a>
+    <ul>
+        <li> <a routerLink="/products">Danh sách sản phẩm</a></li>
+        <li> <a routerLink="/cart">Giỏ hàng</a></li>
+    </ul>
+</li>
+</ul>
+</div>
+<!-- <table>
+
+<tr>
+<td>
+ <input type="button" value="Product" [routerLink]="'san-pham-1'">
+ </td>
+<td>
+<input type="button" value="Customer" [routerLink]="'khach-hang-4'">
+</td>
+<td>
+<input type="button" value="Login" [routerLink]="'login'">
+</td>
+</tr>
+</table> -->
+
+<router-outlet></router-outlet>

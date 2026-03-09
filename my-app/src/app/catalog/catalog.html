@@ -1,0 +1,34 @@
+<div class="catalog-container">
+  <div *ngFor="let category of categories; let i = index">
+    <!-- Category header row -->
+    <table class="category-table">
+      <thead>
+        <tr>
+          <th colspan="4" class="category-header">
+            {{ category.Cateid }} - {{ category.CateName }}
+          </th>
+        </tr>
+        <tr class="product-header">
+          <th>Mã Sản Phẩm</th>
+          <th>Tên Sản Phẩm</th>
+          <th>Giá Sản Phẩm</th>
+          <th>Picture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Nested ngFor for products -->
+        <tr *ngFor="let product of category.Products">
+          <td>{{ product.ProductId }}</td>
+          <td>{{ product.ProductName }}</td>
+          <td>{{ product.Price }}</td>
+          <td>
+            <img [src]="product.Image" alt="{{ product.ProductName }}" class="product-img" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Optional: add spacing between category tables -->
+    <div *ngIf="i < categories.length - 1" class="category-spacer"></div>
+  </div>
+</div>

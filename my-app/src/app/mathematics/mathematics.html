@@ -1,0 +1,27 @@
+<table>
+    <tr>
+      <td>a:</td>
+      <td><input type="text" id="a"/></td>
+    </tr>
+    <tr>
+      <td>b:</td>
+      <td><input type="text" id="b"/></td>
+    </tr>
+    <tr>
+      <td>c:</td>
+      <td><input type="text" id="c"/></td>
+    </tr>
+    <tr>
+      <td>Result:</td>
+      <td><input type="text" id="result" class="result"/></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="buttons">
+        <button (click)="calc('max')">MAX</button>
+        <button (click)="calc('min')">MIN</button>
+        <button (click)="calc('sin')">sin(a)</button>
+        <button (click)="calc('cos')">cos(a)</button>
+        <button (click)="calc('pow')">a²b</button>
+      </td>
+    </tr>
+  </table>

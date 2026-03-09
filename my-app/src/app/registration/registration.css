@@ -1,0 +1,125 @@
+/* FIX CHUẨN: input = select = button */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.register-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f2ff, #f4f9ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-card {
+  width: 520px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 80, 160, 0.15);
+  overflow: hidden;
+}
+
+.register-header {
+  background: linear-gradient(135deg, #6ea8fe, #9ec5fe);
+  color: #ffffff;
+  text-align: center;
+  padding: 22px;
+}
+
+.register-header h1 {
+  margin: 0;
+}
+
+.register-header p {
+  margin-top: 6px;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.register-body {
+  padding: 26px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #1f3c88;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cfe2ff;
+  outline: none;
+  transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #6ea8fe;
+  box-shadow: 0 0 0 2px rgba(110, 168, 254, 0.2);
+}
+
+.form-group small {
+  color: #dc3545;
+  font-size: 13px;
+}
+
+.time-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.time-label {
+  min-width: 90px;
+  font-weight: 600;
+  color: #1f3c88;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  color: #1f3c88;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  color: #1f3c88;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6ea8fe, #9ec5fe);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #5c9cf5, #85b6ff);
+}
+
+.json-box {
+  margin-top: 20px;
+  background: #f1f6ff;
+  border-left: 4px solid #6ea8fe;
+  padding: 15px;
+  border-radius: 6px;
+  color: #1f3c88;
+}

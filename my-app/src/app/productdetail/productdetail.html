@@ -1,0 +1,19 @@
+<table border="1">
+    <tr>
+        <td>ID:</td>
+        <TD>{{product_selected?.id}}</TD>
+    </tr>
+    <tr>
+        <td>Name:</td>
+        <TD>{{product_selected?.name}}</TD>
+    </tr>
+    <tr>
+        <td>Price:</td>
+        <TD>{{product_selected?.price | number}} VND</TD>
+    </tr>
+    <tr>
+        <td>Image:</td>
+        <TD><img src="{{product_selected?.image}}" height="200" width="200" /></TD>
+    </tr>
+</table>
+<button (click)="goback()">Back to List</button>
